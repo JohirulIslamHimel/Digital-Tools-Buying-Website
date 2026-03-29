@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
+import Banner from "./component/Banner";
+import Stats from "./component/Stats";
 
 function App() {
   const [carts, setCarts] = useState([]);
@@ -9,7 +11,8 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navbar cartCount={carts.length} />
 
-        <main className="max-w-7xl mx-auto">{/* Banner Section */}</main>
+        <Banner></Banner>
+        <Stats></Stats>
       </div>
     </>
   );
