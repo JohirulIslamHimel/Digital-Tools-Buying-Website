@@ -28,7 +28,7 @@ const Navbar = ({ cartCount, setActiveTabs }) => {
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52 border border-gray-100 font-medium"
+              className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-white rounded-box w-52 border border-gray-100 font-medium"
             >
               <li>
                 <a
@@ -65,7 +65,7 @@ const Navbar = ({ cartCount, setActiveTabs }) => {
           </div>
           <div className="flex items-center cursor-pointer">
             <img
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-6 sm:h-8  md:h-10 w-auto object-contain"
               src={logo}
               alt="DigiTools"
             />
@@ -96,7 +96,7 @@ const Navbar = ({ cartCount, setActiveTabs }) => {
         </div>
 
         {/* Right Side: Icons & Buttons */}
-        <div className="navbar-end gap-2 md:gap-5">
+        <div className="navbar-end gap-1  md:gap-5">
           {/* Cart Icon with Counter */}
           <div className="relative p-2 cursor-pointer">
             <div className="indicator">
