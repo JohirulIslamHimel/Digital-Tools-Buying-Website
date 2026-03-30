@@ -9,6 +9,7 @@ import Card from "./component/Card";
 import Steps from "./component/Steps";
 import Pricing from "./component/Pricing";
 import Workflow from "./component/Workflow";
+import Footer from "./component/Footer";
 
 const getProducts = async () => {
   const res = await fetch("/models.json");
@@ -25,26 +26,33 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navbar cartCount={carts.length} />
 
-        <Banner></Banner>
-        <Stats></Stats>
         <Tabs
           activeTabs={activeTabs}
           setActiveTabs={setActiveTabs}
           carts={carts}
         ></Tabs>
-        <Suspense
-          fallback={
-            <span class="$$loading $$loading-spinner $$loading-sm"></span>
-          }
-        >
-          {activeTabs === "Products" && (
-            <ProductSection
-              productPromise={productPromise}
-              carts={carts}
-              setCarts={setCarts}
-            ></ProductSection>
-          )}
-        </Suspense>
+        {activeTabs === "Products" && (
+          <>
+            <Banner></Banner>
+            <Stats></Stats>
+            <Suspense
+              fallback={
+                <span className="$$loading $$loading-spinner $$loading-sm"></span>
+              }
+            >
+              {activeTabs === "Products" && (
+                <ProductSection
+                  productPromise={productPromise}
+                  carts={carts}
+                  setCarts={setCarts}
+                ></ProductSection>
+              )}
+            </Suspense>
+            <Steps></Steps>
+            <Pricing></Pricing>
+            <Workflow></Workflow>
+          </>
+        )}
 
         {activeTabs === "Cart" && (
           <Card
@@ -53,9 +61,8 @@ function App() {
             setActiveTabs={setActiveTabs}
           ></Card>
         )}
-        <Steps></Steps>
-        <Pricing></Pricing>
-        <Workflow></Workflow>
+
+        <Footer></Footer>
       </div>
     </>
   );
