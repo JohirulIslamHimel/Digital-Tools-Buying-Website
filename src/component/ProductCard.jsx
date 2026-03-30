@@ -24,7 +24,7 @@ const ProductCard = ({ product, carts, setCarts }) => {
       </span>
       {/* Icon */}
       <div className="w-15 h-15 bg-gray-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-purple-50">
-        <img src={product.icon} alt={product.name} />
+        <img src={`/${product.icon}`} alt={product.name} />
       </div>
       <h3 className="text-2xl font-bold text-[#101727] mb-4 tracking-tight">
         {product.name}
