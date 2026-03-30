@@ -4,12 +4,12 @@ import heroImg from "../assets/banner.png";
 
 const Banner = () => {
   return (
-    <section className="bg-white py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+    <section className="bg-white py-12 md:py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
         {/* Left Content ( */}
         <div className="w-full md:w-1/2 text-left flex flex-col items-start">
           {/* Badge: New Tool */}
-          <div className="inline-flex items-center gap-2.5 bg-[#F3E8FF] text-[#7C3AED] px-5 py-2 rounded-full mb-8 shadow-inner">
+          <div className="inline-flex items-center gap-2 bg-[#F3E8FF] text-[#7C3AED] px-4 py-2 rounded-full mb-8 shadow-inner">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7C3AED] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#7C3AED]"></span>
@@ -20,11 +20,11 @@ const Banner = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl lg:text-7xl font-black text-[#1F2937] leading-[1.1] md:leading-[1.05] tracking-tight mb-8">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-[#101727] leading-[1.05] md:leading-[1.05] tracking-tight mb-6">
             Supercharge Your <br /> Digital Workflow
           </h1>
 
-          <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-12 max-w-xl font-medium">
+          <p className="text-[#627382] text-lg md:text-xl leading-relaxed mb-12 max-w-lg font-medium">
             Access premium AI tools, design assets, templates, and productivity
             software—all in one place. Start creating faster today. Explore
             Products
@@ -32,11 +32,11 @@ const Banner = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-            <button className="btn bg-[#7C3AED] hover:bg-[#6D28D9] text-white border-none rounded-full px-10 h-16 font-bold capitalize text-xl shadow-lg shadow-purple-200 w-full sm:w-auto transition-all duration-300 transform hover:scale-105">
+            <button className="btn bg-linear-to-r from-purple-500 to-pink-500 hover:bg-[#6D28D9] text-white border-none rounded-full px-10 h-16 font-bold capitalize text-xl shadow-lg shadow-purple-200 w-full sm:w-auto transition-all duration-300 transform hover:scale-105">
               Explore Products
             </button>
 
-            <button className="btn btn-outline border-2 border-[#7C3AED] text-[#7C3AED] hover:bg-[#F3E8FF] hover:border-[#7C3AED] rounded-full px-10 h-16 font-bold capitalize text-xl w-full sm:w-auto transition-all duration-300 flex items-center justify-center gap-3">
+            <button className="btn btn-outline border-2 border-[#9514FA] text-[#9514FA] hover:bg-[#d8bcf3] hover:border-[#6010ea] rounded-full px-10 h-16 font-bold capitalize text-xl w-full sm:w-auto transition-all duration-300 flex items-center justify-center gap-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
