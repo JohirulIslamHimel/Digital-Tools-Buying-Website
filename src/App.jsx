@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <div className="min-h-screen bg-white">
-        <Navbar cartCount={carts.length} />
+        <Navbar cartCount={carts.length} setActiveTabs={setActiveTabs} />
 
         {activeTabs === "Products" && (
           <>

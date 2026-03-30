@@ -2,12 +2,67 @@ import React from "react";
 
 import logo from "../assets/DigiTools.png";
 
-const Navbar = ({ cartCount }) => {
+const Navbar = ({ cartCount, setActiveTabs }) => {
   return (
     <nav className="w-full border-b border-gray-100 bg-white py-4">
       <div className="navbar max-w-7xl mx-auto px-4 md:px-10">
         {/* Left Side: Logo */}
         <div className="navbar-start">
+          <div className="dropdown lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost p-0 mr-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52 border border-gray-100 font-medium"
+            >
+              <li>
+                <a
+                  onClick={() => setActiveTabs("Products")}
+                  className="hover:text-[#7C3AED] transition-all cursor-pointer"
+                >
+                  Products
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                  FAQ
+                </a>
+              </li>
+              <li className="sm:hidden">
+                <a className="text-[#7C3AED] font-bold">Login</a>
+              </li>
+            </ul>
+          </div>
           <div className="flex items-center cursor-pointer">
             <img
               className="h-8 md:h-10 w-auto object-contain"
