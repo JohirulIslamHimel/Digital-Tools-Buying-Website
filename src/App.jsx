@@ -6,6 +6,7 @@ import Stats from "./component/Stats";
 import ProductSection from "./component/ProductSection";
 import Tabs from "./component/Tabs";
 import Card from "./component/Card";
+import Steps from "./component/Steps";
 
 const getProducts = async () => {
   const res = await fetch("/models.json");
@@ -50,6 +51,7 @@ function App() {
             setActiveTabs={setActiveTabs}
           ></Card>
         )}
+        <Steps></Steps>
       </div>
     </>
   );
