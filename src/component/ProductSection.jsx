@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import ProductCard from "./ProductCard";
 
-const ProductSection = ({ productPromise }) => {
+const ProductSection = ({ productPromise, carts, setCarts }) => {
   const products = use(productPromise);
   return (
     <div className="py-16 max-w-7xl mx-auto px-4">
@@ -16,7 +16,12 @@ const ProductSection = ({ productPromise }) => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product}></ProductCard>
+          <ProductCard
+            key={product.id}
+            product={product}
+            carts={carts}
+            setCarts={setCarts}
+          ></ProductCard>
         ))}
       </div>
     </div>

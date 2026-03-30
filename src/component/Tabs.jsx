@@ -17,7 +17,7 @@ const Tabs = ({ activeTabs, setActiveTabs, carts }) => {
           type="radio"
           name="my_tabs_1"
           className="tab rounded-xl! font-bold checked:bg-[#7C3AED]! checked:text-white!"
-          aria-label={`Cart `}
+          aria-label={`Cart (${carts.length})`}
           checked={activeTabs === "Cart"}
           onClick={() => setActiveTabs("Cart")}
         />

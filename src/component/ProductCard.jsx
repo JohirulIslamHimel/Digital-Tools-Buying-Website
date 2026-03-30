@@ -1,7 +1,16 @@
 import { Check } from "lucide-react";
 import React from "react";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, carts, setCarts }) => {
+  const isExist = carts.find((item) => item.id === product.id);
+  const handleAddCart = () => {
+    if (isExist) {
+      alert("It's already in your cart!");
+    } else {
+      setCarts([...carts, product]);
+      alert("Added successfully");
+    }
+  };
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 relative group flex flex-col h-full text-left">
       {/* Tag */}
@@ -42,8 +51,22 @@ const ProductCard = ({ product }) => {
         ))}
       </div>
       {/* buy btn */}
-      <button className="btn btn-primary w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-black py-5 rounded-2xl transition-all shadow-lg shadow-purple-100">
-        Buy Now
+      <button
+        onClick={handleAddCart}
+        disabled={isExist}
+        className={`w-full py-5 rounded-2xl transition-all font-black flex items-center justify-center gap-2 mt-auto ${
+          isExist
+            ? "bg-green-500 text-white cursor-not-allowed opacity-90"
+            : "bg-[#7C3AED] hover:bg-[#6D28D9] text-white shadow-lg shadow-purple-100"
+        }`}
+      >
+        {isExist ? (
+          <>
+            <Check size={20} /> Added to Cart
+          </>
+        ) : (
+          "Buy Now"
+        )}
       </button>
     </div>
   );
