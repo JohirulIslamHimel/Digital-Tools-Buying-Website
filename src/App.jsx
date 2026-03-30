@@ -8,6 +8,7 @@ import Tabs from "./component/Tabs";
 import Card from "./component/Card";
 import Steps from "./component/Steps";
 import Pricing from "./component/Pricing";
+import Workflow from "./component/Workflow";
 
 const getProducts = async () => {
   const res = await fetch("/models.json");
@@ -54,6 +55,7 @@ function App() {
         )}
         <Steps></Steps>
         <Pricing></Pricing>
+        <Workflow></Workflow>
       </div>
     </>
   );

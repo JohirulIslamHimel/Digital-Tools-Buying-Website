@@ -54,7 +54,7 @@ const ProductCard = ({ product, carts, setCarts }) => {
       <button
         onClick={handleAddCart}
         disabled={isExist}
-        className={`w-full py-5 rounded-2xl transition-all font-black flex items-center justify-center gap-2 mt-auto ${
+        className={`w-full py-5 rounded-2xl transition-all font-black flex items-center justify-center gap-2 mt-auto cursor-pointer ${
           isExist
             ? "bg-green-500 text-white cursor-not-allowed opacity-90"
             : "bg-[#7C3AED] hover:bg-[#6D28D9] text-white shadow-lg shadow-purple-100"

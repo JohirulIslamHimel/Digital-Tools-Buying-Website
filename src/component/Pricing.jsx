@@ -115,10 +115,10 @@ const Pricing = () => {
 
                 {/* Button */}
                 <button
-                  className={`w-full py-5 rounded-2xl font-black transition-all active:scale-95 ${
+                  className={`w-full py-5 rounded-2xl font-bold transition-all active:scale-95 ${
                     plan.isPopular
-                      ? "bg-white text-[#7C3AED] hover:bg-gray-50"
-                      : "bg-[#7C3AED] text-white hover:bg-[#6D28D9] shadow-lg shadow-purple-100"
+                      ? "bg-white text-[#7C3AED] hover:bg-gray-50 cursor-pointer"
+                      : "bg-[#7C3AED] text-white hover:bg-[#6D28D9] shadow-lg shadow-purple-100 cursor-pointer"
                   }`}
                 >
                   {plan.buttonText}
