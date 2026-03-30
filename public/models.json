@@ -59,8 +59,7 @@
     "description": "Complete toolkit for creating engaging social media content across all platforms.",
     "price": 39,
     "period": "monthly",
-    "tag": "Best Seller",
-    "tagType": "best seller",
+    "tagType": "Best Seller",
     "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
     "icon": "products/social-media.png"
   }

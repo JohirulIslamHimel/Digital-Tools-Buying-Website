@@ -26,27 +26,25 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navbar cartCount={carts.length} />
 
-        <Tabs
-          activeTabs={activeTabs}
-          setActiveTabs={setActiveTabs}
-          carts={carts}
-        ></Tabs>
         {activeTabs === "Products" && (
           <>
             <Banner></Banner>
             <Stats></Stats>
+            <Tabs
+              activeTabs={activeTabs}
+              setActiveTabs={setActiveTabs}
+              carts={carts}
+            ></Tabs>
             <Suspense
               fallback={
                 <span className="$$loading $$loading-spinner $$loading-sm"></span>
               }
             >
-              {activeTabs === "Products" && (
-                <ProductSection
-                  productPromise={productPromise}
-                  carts={carts}
-                  setCarts={setCarts}
-                ></ProductSection>
-              )}
+              <ProductSection
+                productPromise={productPromise}
+                carts={carts}
+                setCarts={setCarts}
+              ></ProductSection>
             </Suspense>
             <Steps></Steps>
             <Pricing></Pricing>
@@ -55,11 +53,18 @@ function App() {
         )}
 
         {activeTabs === "Cart" && (
-          <Card
-            carts={carts}
-            setCarts={setCarts}
-            setActiveTabs={setActiveTabs}
-          ></Card>
+          <>
+            <Tabs
+              activeTabs={activeTabs}
+              setActiveTabs={setActiveTabs}
+              carts={carts}
+            ></Tabs>
+            <Card
+              carts={carts}
+              setCarts={setCarts}
+              setActiveTabs={setActiveTabs}
+            ></Card>
+          </>
         )}
 
         <Footer></Footer>
