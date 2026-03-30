@@ -4,6 +4,7 @@ import Navbar from "./component/Navbar";
 import Banner from "./component/Banner";
 import Stats from "./component/Stats";
 import ProductSection from "./component/ProductSection";
+import Tabs from "./component/Tabs";
 
 const getProducts = async () => {
   const res = await fetch("/models.json");
@@ -13,6 +14,7 @@ const getProducts = async () => {
 const productPromise = getProducts();
 
 function App() {
+  const [activeTabs, setActiveTabs] = useState("Products");
   const [carts, setCarts] = useState([]);
   return (
     <>
@@ -21,12 +23,15 @@ function App() {
 
         <Banner></Banner>
         <Stats></Stats>
+        <Tabs activeTabs={activeTabs} setActiveTabs={setActiveTabs}></Tabs>
         <Suspense
           fallback={
             <span class="$$loading $$loading-spinner $$loading-sm"></span>
           }
         >
-          <ProductSection productPromise={productPromise}></ProductSection>
+          {activeTabs === "Products" && (
+            <ProductSection productPromise={productPromise}></ProductSection>
+          )}
         </Suspense>
       </div>
     </>
