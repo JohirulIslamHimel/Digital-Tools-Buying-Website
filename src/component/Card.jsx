@@ -8,6 +8,13 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
     setCarts(remaining);
   };
 
+  //   checkout handle function:
+  const handleCheckOut = () => {
+    if (carts.length === 0) return;
+    alert("Payment Successful");
+    setCarts([]);
+  };
+
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
       {/* main container */}
@@ -55,7 +62,7 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
                 {/* right side remove btn */}
                 <button
                   onClick={() => removeItem(item.id)}
-                  className="text-pink-500 hover:text-pink-600 font-bold text-sm transition-colors"
+                  className="text-pink-500 hover:text-pink-600 font-bold text-sm transition-colors cursor-pointer"
                 >
                   Remove
                 </button>
@@ -71,7 +78,10 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
             </div>
 
             {/* Checkout btn */}
-            <button className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold py-4 rounded-full mt-6 transition-all shadow-lg shadow-purple-100 active:scale-[0.98]">
+            <button
+              onClick={handleCheckOut}
+              className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold py-4 rounded-full mt-6 transition-all shadow-lg cursor-pointer shadow-purple-100 active:scale-[0.98]"
+            >
               Proceed To Checkout
             </button>
           </div>
