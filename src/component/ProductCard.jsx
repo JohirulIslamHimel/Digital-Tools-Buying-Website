@@ -1,15 +1,13 @@
 import { Check } from "lucide-react";
 import React from "react";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, carts, setCarts }) => {
   const isExist = carts.find((item) => item.id === product.id);
   const handleAddCart = () => {
-    if (isExist) {
-      alert("It's already in your cart!");
-    } else {
-      setCarts([...carts, product]);
-      alert("Added successfully");
-    }
+    setCarts([...carts, product]);
+    toast.success("Added successfully");
+    // alert("Added successfully");
   };
   const tagStyles = {
     "best seller": "bg-[#FEF3C6] text-[#BB4D00]",

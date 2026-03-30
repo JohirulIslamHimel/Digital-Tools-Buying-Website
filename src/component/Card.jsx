@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Card = ({ carts, setCarts, setActiveTabs }) => {
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
@@ -6,12 +7,14 @@ const Card = ({ carts, setCarts, setActiveTabs }) => {
   const removeItem = (id) => {
     const remaining = carts.filter((item) => item.id !== id);
     setCarts(remaining);
+    toast.warn("Item remove from cart");
   };
 
   //   checkout handle function:
   const handleCheckOut = () => {
     if (carts.length === 0) return;
-    alert("Payment Successful");
+    toast.success("Payment Successful");
+    // alert("Payment Successful");
     setCarts([]);
   };
 
