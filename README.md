@@ -1,16 +1,28 @@
-# React + Vite
+# Project Name: DigiTools - Digital Tools Buying Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+This is a simple and clean website where you can find and buy premium digital products like AI writing tools, design templates, and productivity software. I built this to practice making a real-world shopping experience with a focus on a smooth user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies I Used
 
-## React Compiler
+I wanted to keep the project fast and modern, so I chose:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React.js** - For making the site fast and dynamic.
+- **Tailwind CSS** - To style everything quickly and keep it responsive.
+- **DaisyUI** - For the pre-made components like buttons and navbar.
+- **Google Fonts (Manrope)** - To make the text look clean and professional.
 
-## Expanding the ESLint configuration
+## 3 Features about project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Fully Responsive:** The site works perfectly on your phone, tablet, or laptop. No broken layouts.
+- **Interactive Cart:** You can add items to your cart and see real-time updates with nice notifications (Toastify).
+- **Modern Design:** I spent a lot of time fixing the small details like the sticky navbar, custom icons, and premium fonts to give it a "SaaS" look.
+
+## How to Run it Locally
+
+If you want to check out the code on your own machine:
+
+1. Clone the repo.
+2. Run `npm install` to get the dependencies.
+3. Run `npm run dev` to start the project.
