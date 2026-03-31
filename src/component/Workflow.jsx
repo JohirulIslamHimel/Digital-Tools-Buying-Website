@@ -8,7 +8,7 @@ const Workflow = () => {
           Ready to Transform Your Workflow?
         </h2>
         <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium opacity-90 leading-relaxed">
-          Join thousands of professionals who are already using Digi-tools to
+          Join thousands of professionals who are already using Digitools to
           work smarter.Start your free trial today.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">

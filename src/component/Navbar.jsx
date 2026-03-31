@@ -32,6 +32,7 @@ const Navbar = ({ cartCount, setActiveTabs }) => {
             >
               <li>
                 <a
+                  href="#"
                   onClick={() => setActiveTabs("Products")}
                   className="hover:text-[#7C3AED] transition-all cursor-pointer"
                 >
@@ -39,27 +40,41 @@ const Navbar = ({ cartCount, setActiveTabs }) => {
                 </a>
               </li>
               <li>
-                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                <a
+                  href="#"
+                  className="hover:text-[#7C3AED] transition-all cursor-pointer"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                <a
+                  href="#"
+                  className="hover:text-[#7C3AED] transition-all cursor-pointer"
+                >
                   Pricing
                 </a>
               </li>
               <li>
-                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                <a
+                  href="#"
+                  className="hover:text-[#7C3AED] transition-all cursor-pointer"
+                >
                   Testimonials
                 </a>
               </li>
               <li>
-                <a className="hover:text-[#7C3AED] transition-all cursor-pointer">
+                <a
+                  href="#"
+                  className="hover:text-[#7C3AED] transition-all cursor-pointer"
+                >
                   FAQ
                 </a>
               </li>
               <li className="sm:hidden">
-                <a className="text-[#7C3AED] font-bold">Login</a>
+                <a href="" className="text-[#7C3AED] font-bold">
+                  Login
+                </a>
               </li>
             </ul>
           </div>
@@ -76,21 +91,29 @@ const Navbar = ({ cartCount, setActiveTabs }) => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-8 text-[15px] font-medium text-gray-600">
             <li>
-              <a className="hover:text-[#7C3AED] transition-all">Products</a>
+              <a href="#" className="hover:text-[#7C3AED] transition-all">
+                Products
+              </a>
             </li>
             <li>
-              <a className="hover:text-[#7C3AED] transition-all">Features</a>
+              <a href="#" className="hover:text-[#7C3AED] transition-all">
+                Features
+              </a>
             </li>
             <li>
-              <a className="hover:text-[#7C3AED] transition-all">Pricing</a>
+              <a href="#" className="hover:text-[#7C3AED] transition-all">
+                Pricing
+              </a>
             </li>
             <li>
-              <a className="hover:text-[#7C3AED] transition-all">
+              <a href="#" className="hover:text-[#7C3AED] transition-all">
                 Testimonials
               </a>
             </li>
             <li>
-              <a className="hover:text-[#7C3AED] transition-all">FAQ</a>
+              <a href="#" className="hover:text-[#7C3AED] transition-all">
+                FAQ
+              </a>
             </li>
           </ul>
         </div>
