@@ -6,7 +6,7 @@ This is a simple and clean website where you can find and buy premium digital pr
 
 ## 🔗 Project Links
 - **Live Demo:** digitools-digital-tools-buyingwebsite.netlify.app
-- **Repository:**
+- **Repository:** https://github.com/JohirulIslamHimel/Digital-Tools-Buying-Website
 
 📸 Preview
 <img width="1901" height="870" alt="image" src="https://github.com/user-attachments/assets/b65ab668-3590-41a1-b343-bb72f13c61a9" />
@@ -59,7 +59,7 @@ Follow these steps to run the project on your local machine:
 Clone the Repository:
 
 Bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/JohirulIslamHimel/Digital-Tools-Buying-Website.git
 cd YOUR_REPO_NAME
 Install Dependencies:
 
@@ -74,8 +74,6 @@ Open your browser and navigate to http://localhost:5173.
 
 🔗 Links
 Live Site: digitools-digital-tools-buyingwebsite.netlify.app
-
-Documentation: GitHub Repo
 
 👤 Author
 Johirul Islam Frontend Developer | SQA Engineer
