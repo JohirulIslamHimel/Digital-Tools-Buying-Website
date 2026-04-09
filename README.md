@@ -5,7 +5,7 @@
 This is a simple and clean website where you can find and buy premium digital products like AI writing tools, design templates, and productivity software. I built this to practice making a real-world shopping experience with a focus on a smooth user interface.
 
 ## 🔗 Project Links
-- **Live Demo:** digitools-digital-tools-buyingwebsite.netlify.app
+- **Live Demo:** [digitools-digital-tools-buyingwebsite.netlify.app](https://digitools-digital-tools-buyingwebsite.netlify.app/)
 - **Repository:** https://github.com/JohirulIslamHimel/Digital-Tools-Buying-Website
 
 📸 Preview
